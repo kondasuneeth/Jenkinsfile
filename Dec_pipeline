@@ -1,0 +1,20 @@
+pipeline {
+agent any
+
+stages {
+   stage('clean'){
+   steps {
+            Echo 'cleaning'
+            bat mvn clean
+            }
+            }
+             stage('package'){
+   steps {
+            Echo 'Packaging'
+            bat mvn package
+            }
+           }
+           }
+           
+           
+   
